@@ -1,5 +1,5 @@
 import numpy as np
-
+ # Harry's code
 B=matrix([[2,-1,-3],[-1,2,-1],[-1,-1,2]])
 L1=(B.inverse())[0]
 L2=(B.inverse())[1]
@@ -12,7 +12,7 @@ R3=matrix.identity(3)-matrix(3,3,[[0,0,0],[0,0,0],(B.transpose())[2]])
 
 # Affine chart x+y+z = 1, translate by z/(x+y+z)
 def P(v):
-    p=vector(([v[0]-v[2])/(v[0]+v[1]+v[2]),(v[1]-v[2])/(v[0]+v[1]+v[2]]))
+    p=vector([([v[0]-v[2])/(v[0]+v[1]+v[2]),(v[1]-v[2])/(v[0]+v[1]+v[2])])
     return p
 
 def tiling(matrices):
