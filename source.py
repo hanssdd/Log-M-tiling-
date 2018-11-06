@@ -1,3 +1,5 @@
+import numpy as np
+
 B=matrix([[2,-1,-3],[-1,2,-1],[-1,-1,2]])
 L1=(B.inverse())[0]
 L2=(B.inverse())[1]
