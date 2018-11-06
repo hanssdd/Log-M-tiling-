@@ -9,8 +9,10 @@ R1=matrix.identity(3)-matrix(3,3,[(B.transpose())[0],[0,0,0],[0,0,0]])
 R2=matrix.identity(3)-matrix(3,3,[[0,0,0],(B.transpose())[1],[0,0,0]])
 R3=matrix.identity(3)-matrix(3,3,[[0,0,0],[0,0,0],(B.transpose())[2]])
 
+
+# Affine chart x+y+z = 1, translate by z/(x+y+z)
 def P(v):
-    p=vector([v[0]/v[2],v[1]/v[2]])
+    p=vector(([v[0]-v[2])/(v[0]+v[1]+v[2]),(v[1]-v[2])/(v[0]+v[1]+v[2]]))
     return p
 
 def tiling(matrices):
